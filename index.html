@@ -11,7 +11,7 @@
     <nav id="navbar">
         <h1>MIPS Documentation</h1>
         <a class="nav-link" href="#Introduction">Introduction</a>
-        <a class="nav-link" href="#">Header</a>
+        <a class="nav-link" href="#Registers">Registers</a>
         <a class="nav-link" href="#">Header</a>
         <a class="nav-link" href="#">Header</a>
         <a class="nav-link" href="#">Header</a>
@@ -27,10 +27,67 @@
                 this architecture like the video games console (PlayStation, Playstation 2, etc ...) or for routers and
                 computers too. So it's a really good thing to learn this language because it is used in a lot of system
                 and in the future it's possible that you will use it.</p>
+
+            <p>If you want to compile your code on your computer, it will be complicated because a lot of computers
+                today is based on x86 (another famous type of assembly language used) and can't compile the MIPS code.
+                But a solution exist, it's to find an simulator and good news because a famous simulator exist for MIPS
+                called MARS. <a href="http://courses.missouristate.edu/kenvollmar/mars/" target="_blank">Click here</a>
+                to see the page of it and to download it. MARS will assemble your code and execute it. You just need to
+                have Java currently install in your computer and MARS will work.
+            </p>
         </section>
 
-        <section class="main-section" id="">
-            <h2 class="header">Header</h2>
+        <section class="main-section" id="Registers">
+            <h2 class="header">Registers</h2>
+            <p>What is a register ? It's a memory location internal to a CPU. We can store in these registers simple
+                informations like integers, adresses, etc... In the end, it's like variables in other programming
+                languages but the difference is the location : variables are not stored in the CPU but in the Random
+                Access Memory (RAM). Indeed, the goal of registers is to store these datas temporary to access them
+                faster unlike the variables.</p>
+
+            <p>Each register in MIPS begin with the $ character.
+                There are 32 registers on MIPS :</p>
+            <ul>
+                <li>
+                    Register 1 - The $zero register always equal to 0, it's used like a constant.
+                </li>
+                <li>
+                    Register 2 - The $at register is reserved by the assembly, you can't use this one.
+                </li>
+                <li>
+                    Registers 3 and 4 - The $v0 and $v1 registers are used to store functions results.
+                </li>
+                <li>
+                    Registers 4 to 7 - The $a0 to $a3 registers are used to store arguments when you need to use a
+                    function for exemple.
+                </li>
+                <li>
+                    Registers 8 to 15 - The $t0 to $t7 registers can be used to store any type of informations
+                    temporary.
+                </li>
+                <li>
+                    Registers 16 to 23 - The $s0 to $s7 registers are used to save values.
+                </li>
+                <li>
+                    Registers 24 and 25 - The $t8 to $t9 registers are likes the others $t registers before.
+                </li>
+                <li>
+                    Registers 26 and 27 - The $k0 to $k1 registers are reserverd by the kernel system
+                    them.
+                </li>
+                <li>
+                    Register 28 - The $gp register is the global pointer.
+                </li>
+                <li>
+                    Register 29 - The $sp register is the stack pointer.
+                </li>
+                <li>
+                    Register 30 - The $fp register is the frame pointer.
+                </li>
+                <li>
+                    Register 31 - The $ra register is the return adress.
+                </li>
+            </ul>
         </section>
 
         <section class="main-section" id="">
