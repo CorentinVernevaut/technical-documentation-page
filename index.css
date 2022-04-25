@@ -35,10 +35,12 @@ body {
 #main-doc {
     position: absolute;
     left: 250px;
+    margin-right: 50px;
 }
 
 p {
     line-height: 1.5;
+    text-align: justify;
 }
 
 .main-section ul li {
@@ -61,5 +63,4 @@ code {
 .code_block {
     display: block;
     white-space: pre-wrap;
-    width: fit-content;
 }
