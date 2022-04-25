@@ -9,12 +9,12 @@
 <body>
 
     <nav id="navbar">
-        <h1>MIPS Documentation</h1>
+        <h1>MIPS Beginner Documentation</h1>
         <a class="nav-link" href="#Introduction">Introduction</a>
         <a class="nav-link" href="#Registers">Registers</a>
+        <a class="nav-link" href="#Hello_world">Hello world</a>
         <a class="nav-link" href="#">Header</a>
-        <a class="nav-link" href="#">Header</a>
-        <a class="nav-link" href="#">Header</a>
+        <a class="nav-link" href="#References">References</a>
     </nav>
 
     <main id="main-doc">
@@ -90,16 +90,90 @@
             </ul>
         </section>
 
-        <section class="main-section" id="">
-            <h2 class="header">Header</h2>
+        <section class="main-section" id="Hello_world">
+            <h2 class="header">Hello world</h2>
+            <p>Let's start to begin your first program on MIPS ! The goal is to write "Hello world" on the console. Open
+                the MARS simulator and create a new file on it. You will need to define two sections :</p>
+            <ul>
+                <li>
+                    <p>A data section to create all the values will be use in the program and store in the random access
+                        memory.</p>
+
+                    <p>We will need a variable to store our "Hello world" message, begin to call your variable with a
+                        name like "helloWorldMessage". After the variable name, you will choose the data type of this
+                        variable, for this program you will work with text content so choose <code>.asciiz</code>. In
+                        the end, add your text content between coma : "Hello World". If you followed the steps, your
+                        code must seems like to that :</p>
+                    <code>
+                        .data
+                            helloWorldMessage: .asciiz "Hello world"
+                    </code>
+                </li>
+                <li>
+                    <p>A text section to define all the instructions of the program. You need to write it on your
+                        program with <code>.text</code></p>
+
+                    <p>So now, we want to print a message on the console, in MIPS it's mandatory to use this instruction
+                        to make that : the <code>li</code> instruction of MIPS allows to move a immediate value into a
+                        register. In this case, our value will be <code>4</code> (why ? It's because each data type has
+                        a specific value, for exemple if you want to display a integer, you will need to use the value
+                        <code>1</code>) and the registration we will use is <code>$v0</code>. Your instruction must
+                        seems like to that :
+                        <code>
+                            li $v0, 4
+                        </code>
+                    </p>
+
+
+                    <p>After that, we need to have a link with the value that we defined before in the data section.
+                        Let's use the <code>la</code> instruction, it allows to load a adress into a register. In this
+                        case, our adress will be the name of our message "helloWorldMessage" and the register will be
+                        <code>$a0</code>. Your instruction must seems like to that :
+                        <code>
+                            la $a0, helloWorldMessage
+                        </code>
+                    </p>
+
+                    <p>Lastly, you can add this instruction : <code>syscall</code> at the end of your code and it will
+                        allow to execute all the previous commands.</p>
+                </li>
+            </ul>
+            <p>Now, your code must seems like to that :</p>
+            <code>
+                .data
+                    helloWorldMessage: .asciiz "Hello world"
+                .text
+                    li $v0, 4
+                    la $a0, helloWorldMessage
+                    syscall
+            </code>
+            <p>Try to execute it, and the simulator will show you the message !</p>
         </section>
 
         <section class="main-section" id="">
             <h2 class="header">Header</h2>
         </section>
 
-        <section class="main-section" id="">
-            <h2 class="header">Header</h2>
+        <section class="main-section" id="References">
+            <h2 class="header">References</h2>
+            <ul>
+                <li>
+                    <a href="https://sweetcode.io/building-first-simple-program-mips-assembly-language/"
+                        target="_blank">https://sweetcode.io/building-first-simple-program-mips-assembly-language/</a>
+                </li>
+                <li>
+                    <a href="https://chortle.ccsu.edu/AssemblyTutorial/index.html"
+                        target="_blank">https://chortle.ccsu.edu/AssemblyTutorial/index.html</a>
+                </li>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/MIPS_architecture"
+                        target="_blank">https://en.wikipedia.org/wiki/MIPS_architecture</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A"
+                        target="_blank">https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
+                </li>
+            </ul>
         </section>
     </main>
 
