@@ -4,6 +4,8 @@
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -104,14 +106,12 @@
                         variable, for this program you will work with text content so choose <code>.asciiz</code>. In
                         the end, add your text content between coma : "Hello World". If you followed the steps, your
                         code must seems like to that :</p>
-                    <code>
-                        .data
-                            helloWorldMessage: .asciiz "Hello world"
-                    </code>
+                    <code class="code_block">.data
+    helloWorldMessage: .asciiz "Hello world"</code>
                 </li>
                 <li>
                     <p>A text section to define all the instructions of the program. You need to write it on your
-                        program with <code>.text</code></p>
+                        program with <code>.text</code>.</p>
 
                     <p>So now, we want to print a message on the console, in MIPS it's mandatory to use this instruction
                         to make that : the <code>li</code> instruction of MIPS allows to move a immediate value into a
@@ -119,34 +119,28 @@
                         a specific value, for exemple if you want to display a integer, you will need to use the value
                         <code>1</code>) and the registration we will use is <code>$v0</code>. Your instruction must
                         seems like to that :
-                        <code>
-                            li $v0, 4
-                        </code>
                     </p>
+                    <code>li $v0, 4</code>
 
 
                     <p>After that, we need to have a link with the value that we defined before in the data section.
                         Let's use the <code>la</code> instruction, it allows to load a adress into a register. In this
                         case, our adress will be the name of our message "helloWorldMessage" and the register will be
                         <code>$a0</code>. Your instruction must seems like to that :
-                        <code>
-                            la $a0, helloWorldMessage
-                        </code>
                     </p>
+                    <code>la $a0, helloWorldMessage</code>
 
                     <p>Lastly, you can add this instruction : <code>syscall</code> at the end of your code and it will
                         allow to execute all the previous commands.</p>
                 </li>
             </ul>
             <p>Now, your code must seems like to that :</p>
-            <code>
-                .data
-                    helloWorldMessage: .asciiz "Hello world"
-                .text
-                    li $v0, 4
-                    la $a0, helloWorldMessage
-                    syscall
-            </code>
+            <code class="code_block">.data
+    helloWorldMessage: .asciiz "Hello world"
+.text
+    li $v0, 4
+    la $a0, helloWorldMessage
+    syscall</code>
             <p>Try to execute it, and the simulator will show you the message !</p>
         </section>
 

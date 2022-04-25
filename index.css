@@ -1,0 +1,65 @@
+body {
+    font-family: 'Roboto';
+}
+
+#navbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 2px solid black;
+}
+
+#navbar h1 {
+    text-align: center;
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+    margin: 0 10px 0 10px;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+#navbar a:hover {
+    background-color: lightgray;
+}
+
+
+#main-doc {
+    position: absolute;
+    left: 250px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.main-section ul li {
+    margin-bottom: 1em;
+}
+
+.main-section a {
+    color: blue;
+}
+
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #666;
+    font-family: monospace;
+    font-size: 15px;
+    padding: .25em .5em;
+}
+
+.code_block {
+    display: block;
+    white-space: pre-wrap;
+    width: fit-content;
+}
