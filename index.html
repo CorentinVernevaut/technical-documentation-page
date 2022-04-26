@@ -15,7 +15,7 @@
         <a class="nav-link" href="#Introduction">Introduction</a>
         <a class="nav-link" href="#Registers">Registers</a>
         <a class="nav-link" href="#Hello_world">Hello world</a>
-        <a class="nav-link" href="#">Header</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
         <a class="nav-link" href="#References">References</a>
     </nav>
 
@@ -144,8 +144,55 @@
             <p>Try to execute it, and the simulator will show you the message !</p>
         </section>
 
-        <section class="main-section" id="">
-            <h2 class="header">Header</h2>
+        <section class="main-section" id="Data_Types">
+            <h2 class="header">Data Types</h2>
+            <p>In MIPS, you can use a lot of different data type and each one will have a different number of bits. Here
+                is a table of several of them :</p>
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Usage</th>
+                    <th>Exemple</th>
+                </tr>
+                <tr>
+                    <td>.ascii</td>
+                    <td>Store string in memory without null terminator</td>
+                    <td><code>value: .ascii "Hello world"</code></td>
+                </tr>
+                <tr>
+                    <td>.asciiz</td>
+                    <td>Store string in memory and null-terminate it</td>
+                    <td><code>value: .asciiz "Hello world"</code></td>
+                </tr>
+                <tr>
+                    <td>.byte</td>
+                    <td>Store integers or character in memory (4 bits)</td>
+                    <td>
+                        <code>value: .byte 4</code>
+                        <code>value: .byte 'c'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>.halfword</td>
+                    <td>Store half of a word (16 bits) in memory</td>
+                    <td><code>value: .halfword 'A'</code></td>
+                </tr>
+                <tr>
+                    <td>.word</td>
+                    <td>Store the n 32 bits quantities in successive memory words</td>
+                    <td><code>value: .word 1,2,3,4,5,6,6,7,7</code></td>
+                </tr>
+                <tr>
+                    <td>.float</td>
+                    <td>Store floating value with single decimal value</td>
+                    <td><code>value: .float 4.5</code></td>
+                </tr>
+                <tr>
+                    <td>.double</td>
+                    <td>Store double value with more than one decimal value</td>
+                    <td><code>value: .double 4.55</code></td>
+                </tr>
+            </table>
         </section>
 
         <section class="main-section" id="References">
@@ -166,6 +213,10 @@
                 <li>
                     <a href="https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A"
                         target="_blank">https://www.youtube.com/playlist?list=PL5b07qlmA3P6zUdDf-o97ddfpvPFuNa5A</a>
+                </li>
+                <li>
+                    <a href="https://www.assemblylanguagetuts.com/mips-assembly-data-types/"
+                        target="_blank">https://www.assemblylanguagetuts.com/mips-assembly-data-types/</a>
                 </li>
             </ul>
         </section>
